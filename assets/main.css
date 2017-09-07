@@ -1,0 +1,295 @@
+/*==========================
+COLORS
+blue: 			#09759c
+light blue: 	#5995b4
+grey: 			#a9c5d7
+==========================*/
+
+/*==========================
+IMPORTS
+==========================*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700|Playfair+Display:400,400i');
+
+/*==========================
+ELEMENTS
+==========================*/
+body {
+	font-family: "Playfair Display", serif;
+	font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+}
+
+h1, .h1 {
+	text-transform: uppercase;
+}
+
+p {
+	font-size: 1.05em;
+	line-height: 1.8;
+}
+
+	strong {
+		font-family: "Montserrat";
+		font-weight: 700;
+	}
+
+a {
+	color: #09759c;
+}
+	a:hover, a.active {
+		color: #5995b4;
+		text-decoration: none;
+	}
+
+/*==========================
+LAYOUT
+==========================*/
+.header {
+	box-sizing: border-box;
+	padding: 1em;
+}
+
+.page {
+	padding: 1em;
+}
+
+@media( min-width: 768px ) {
+	.header {
+		padding: 4em;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 400px;
+	}
+
+	.page {
+		padding: 2em;
+		margin-left: 400px;
+		max-width: 820px;
+	}
+}
+
+
+/*==========================
+HEADER
+==========================*/
+.logo {
+	margin: 0;
+	width: 100%;
+}
+	.logo a {
+		display: block;
+	}
+		.logo a:hover {
+			border-bottom-color: transparent;
+		}
+
+	.logo img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
+/*==========================
+NAV
+==========================*/
+.nav ul {
+	list-style: none;
+	margin: 2em 0;
+	padding: 0;
+	width: 100%;
+}
+@media( min-width: 768px ) {
+	.nav ul {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+@media( max-width: 767px ) {
+	.nav ul {
+		text-align: center;
+	}
+}
+
+
+	.nav a {
+		font-family: 'Montserrat', sans-serif;
+		text-transform: uppercase;
+		font-weight: 700;
+		border-bottom: 2px solid transparent;
+		letter-spacing: 0.25em;
+		font-size: 0.9em;
+	}
+
+		.nav a:hover,
+		.nav a.active,
+		.nav a:focus {
+			border-bottom: 2px solid #5995b4;
+			text-decoration: none;
+		}
+
+
+/*==========================
+SECTIONS
+==========================*/
+.section {
+	padding: 2em 0;
+}
+
+	[id]:focus {
+		outline: none;
+	}
+
+.section-title {
+	text-align: center;
+	border-top: 1px solid #5995b4;
+	margin-top: 1.5em;
+	font-size: 1em;
+	letter-spacing: 0.5em;
+	color: #5995b4;
+}
+	.section-title span {
+		position: relative;
+		top: -0.5em;
+		background: white;
+		padding: 0 2em;
+		display: inline-block;
+	}
+
+
+/*==========================
+FEATURE
+==========================*/
+	.feature-img {
+		height: 100%;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.feature {
+		margin: 0 -0.5%;
+	}
+	.feature-img {
+		float: left;
+		width: 49%;
+		margin: 0 0.5%;
+		background: no-repeat center center;
+		background-size: cover;
+	}
+
+	.feature {
+		height: 250px;
+	}
+	@media( min-width: 768px ) {
+		.feature {
+			height: 600px;
+		}
+		.feature--hero {
+			height: 500px;
+		}
+	}
+
+	.feature__caption {
+		display: block;
+		padding: 2em;
+		background: rgba(9,117,156,0.6);
+		color: white;
+		text-transform: uppercase;
+		text-align: center;
+		width: 100%;
+		font-family: "Montserrat", sans-serif;
+		letter-spacing: 0.5em;
+		transition: background 200ms ease-in-out;
+	}
+
+		a.feature__caption:hover {
+			background: rgba(9,117,156,1);
+			color: #a9c5d7;
+		}
+
+
+/*==========================
+BRANDS
+==========================*/
+
+.brands {
+	list-style: none;
+	padding: 0;
+	margin: 2em 0;
+}
+	.brands li {
+		margin: 0;
+	}
+
+	.brand {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+		.brand h1 {
+			font-size: 1.4em;
+			margin: 0;
+			padding: 0.5em;
+			background: black;
+			color: white;
+		}
+
+		.brand div {
+			width: 70%;
+			padding: 2em 0;
+			border-bottom: 1px dotted
+		}
+
+/*==========================
+CARD
+==========================*/
+.card {
+	padding: 2em;
+	border: 1px solid #a9c5d7;
+	margin: 1em 0;
+	min-height: 220px;
+	box-sizing: border-box;
+}
+
+	.card--center {
+		text-align: center;
+	}
+
+	.card > * {
+		margin-top: 0;
+	}
+
+	.card p:last-of-type {
+		margin-bottom: 0;
+	}
+
+.card__subtitle {
+	font-size: 1em;
+}
+
+/*==========================
+BUTTONS
+==========================*/
+.btn-primary {
+	background-color: #5995b4;
+	border-color: #09759c;
+}
+
+	.btn-ghost {
+		background-color: transparent;
+		color: #09759c;
+		transition: all 200ms ease-in-out;
+	}
+		.btn-ghost:hover {
+			background-color: #09759c;
+			color: white;
+		}
