@@ -14,7 +14,7 @@ IMPORTS
 ELEMENTS
 ==========================*/
 body {
-	font-family: "Playfair Display", serif;
+	font-family: "arial", serif;
 	font-weight: 400;
 }
 
@@ -45,10 +45,26 @@ a {
 		color: #5995b4;
 		text-decoration: none;
 	}
+section{
+	margin-bottom:25px;
+}
+footer{
+	background-color:#5995b4;
+	padding:20px 0;
+}
 
 /*==========================
 LAYOUT
 ==========================*/
+header{
+	display: flex;
+	flex-direction: row;
+	padding:20px 0;
+	margin:0 0 0 20px;
+}
+nav{
+	margin-left: auto;
+}
 .header {
 	box-sizing: border-box;
 	padding: 1em;
@@ -56,6 +72,9 @@ LAYOUT
 
 .page {
 	padding: 1em;
+}
+.row{
+	margin:20px 0;
 }
 
 @media( min-width: 768px ) {
@@ -80,10 +99,11 @@ HEADER
 ==========================*/
 .logo {
 	margin: 0;
-	width: 100%;
+	width: 75%;
 }
 	.logo a {
 		display: block;
+		width: auto;
 	}
 		.logo a:hover {
 			border-bottom-color: transparent;
@@ -91,7 +111,7 @@ HEADER
 
 	.logo img {
 		display: block;
-		width: 100%;
+		width: 15%;
 		height: auto;
 	}
 
@@ -104,10 +124,14 @@ NAV
 	padding: 0;
 	width: 100%;
 }
+
 @media( min-width: 768px ) {
 	.nav ul {
 		display: flex;
 		justify-content: space-between;
+	}
+	.nav ul li{
+		margin: 0 2em ;
 	}
 }
 @media( max-width: 767px ) {
@@ -133,6 +157,17 @@ NAV
 			text-decoration: none;
 		}
 
+/*==========================
+carousel
+==========================*/
+
+.carousel-caption{
+	bottom:45%;
+}
+.carousel-caption img, .carousel-caption svg{
+	color:#fff;
+	fill:currentColor;
+}
 
 /*==========================
 SECTIONS
@@ -150,7 +185,7 @@ SECTIONS
 	border-top: 1px solid #5995b4;
 	margin-top: 1.5em;
 	font-size: 1em;
-	letter-spacing: 0.5em;
+	letter-spacing: 0.2em;
 	color: #5995b4;
 }
 	.section-title span {
@@ -218,36 +253,47 @@ FEATURE
 /*==========================
 BRANDS
 ==========================*/
-
+.brandLogo svg{
+	width:200px;
+}
 .brands {
 	list-style: none;
 	padding: 0;
 	margin: 2em 0;
 }
 	.brands li {
-		margin: 0;
+		margin: 2em 0;
 	}
 
-	.brand {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
+	.brand div {
+		padding: 2em 0;
+		border-bottom: 1px dotted #ccc;
+	}
+
+	@media(min-width:768px){
+		.brand {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+		}
+		.brand div {
+			width: 70%;
+		}
+		.brands li {
+			margin: 0;
+		}
 	}
 
 		.brand h1 {
 			font-size: 1.4em;
 			margin: 0;
 			padding: 0.5em;
-			background: black;
+			background:black;
 			color: white;
 		}
 
-		.brand div {
-			width: 70%;
-			padding: 2em 0;
-			border-bottom: 1px dotted
-		}
+
 
 /*==========================
 CARD
@@ -293,3 +339,12 @@ BUTTONS
 			background-color: #09759c;
 			color: white;
 		}
+
+/*==========================
+FOOTER
+==========================*/
+.copy{
+	color:#fff;
+	font-size:11px;
+	text-transform:uppercase;
+}

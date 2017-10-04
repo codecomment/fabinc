@@ -1,5 +1,5 @@
 $(function() {
-	var scrollSpeed = 500;
+	/*var scrollSpeed = 500;
 
 	var navigationTrack = $('.section').waypoint({
 	  handler: function(direction) {
@@ -43,6 +43,6 @@ $(function() {
 	        });
 	      }
 	    }
-	  });
+	  });*/
 
 });
